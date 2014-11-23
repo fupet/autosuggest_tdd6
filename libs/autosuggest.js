@@ -38,7 +38,7 @@ var Backbone = require('backbone'),
 			_insertResults : function(ev) {
 				this._getResultsContainer().empty();
 				if (typeof ev === 'object' && typeof ev.data === 'object') {
-					Backbone.$.each(ev.data, Backbone.$.proxy(function(item) {
+					Backbone.$.each(ev.data, Backbone.$.proxy(function(index, item) {
 						var li = Backbone.$('<li/>');
 						li.text(item);
 						this._getResultsContainer().append(li);
